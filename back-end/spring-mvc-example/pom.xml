@@ -8,11 +8,26 @@
   <description>Spring Mvc Example One</description>
 
   <dependencies>
-    <dependency>
-       <groupId>org.springframework</groupId>
-       <artifactId>spring-webmvc</artifactId>
-       <version>4.3.9.RELEASE</version>
-    </dependency>
+  <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-core</artifactId>
+	    <version>5.1.4.RELEASE</version>
+	</dependency>
+  
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	    <version>5.1.4.RELEASE</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-tx</artifactId>
+	    <version>5.1.4.RELEASE</version>
+	</dependency>
 
     <dependency>
         <groupId>javax.servlet</groupId>
@@ -38,13 +53,20 @@
 	    <version>2.8.1</version>
     </dependency>
 
-<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 	<dependency>
 	    <groupId>org.hibernate</groupId>
 	    <artifactId>hibernate-core</artifactId>
 	    <version>5.4.0.Final</version>
 	</dependency>
-    
+
+	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>5.1.6</version>
+	</dependency>
+
   </dependencies>
 
   <build>

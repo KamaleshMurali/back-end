@@ -6,6 +6,7 @@ package com.example.controller;
 import java.sql.Date;
 import java.util.ArrayList;
 
+import org.hibernate.Session;
 //import org.hibernate.Session;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 //import com.example.config.HibernateUtil;
 import com.example.model.User;
+import com.example.resource.HibernateUtil;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -70,11 +72,11 @@ public class SampleController {
         userTwo.setBirthDate(Date.valueOf("1997-05-29"));
         users.add(userTwo);
 
-//        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-//        session.beginTransaction();
-//        session.save(userOne);
-//        session.getTransaction().commit();
-//        HibernateUtil.getSessionFactory().close();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction();
+        session.save(userOne);
+        session.getTransaction().commit();
+        HibernateUtil.getSessionFactory().close();
 
 
         ObjectMapper json = new ObjectMapper();
